@@ -20,30 +20,20 @@ The solution outputs for each file should be the print statements described in t
 ## Step 3 - Calculate Big O
 Once you have completed your solution for each problem, perform a run time analysis (Worst Case Big-O Notation) of your solution. Document this for each problem and include this in your submission.
 
+* Time Complexity : How effecient our algorithm is w.r.t the the time it take to do the computation
+* Space Complexity : When we refer to space complexity, we are talking about how efficient our algorithm is in terms of memory usage.
+
+### TASK0: In this task we need to find the first record of texts and the last record of calls? We are making use of the Sorted() function which make use of the Timesort algorithm internally, which has the complexity in terms of O notation is O(nlogn). So the overall complexity of this particular task would be O(nlogn)
+### TASK1: In this task we are iterating through texts and calls list and then making use of union to merge the two list. Union operation will have the complexity of O(len(s1) + len(s2)) ~ O(n) while iterating through the lists can also be done in O(n). So ovrall complexity would be for task-1 would be O(n).  
+### TASK2:To find the telephone number that spent the longest time on the phon during the period, we need to sort the list on particular parameter. We are using Sorted() which takes o(n log n) time. So overall time complexity of this particular task2 would be O(n long n) 
+### TASK3:get_prefixes(phonenumber) function takes O(n) time. Fetching all the Phone Number prefixes and store in the "called_codes" list also takes O(n) time. Sort() internal python fuction takes o(n logn) time. SO overall o(n) + o(n) + o(n logn ) ~ o(n) time.
+### TASK4:Iterating thought calls list takes o(n) time. Difference function takes O(min(len(s), len(t)). So overall it would take o(n).
+
 ## Step 4 - Check again Rubric and Submit
 Use the rubric to check your work before submission. A Udacity Reviewer will give feedback on your work based on this rubric and will leave helpful comments on your code.
-
-
-
 
 ## Important Links
 * https://docs.python.org/3/howto/sorting.html
 * http://svn.python.org/projects/python/trunk/Objects/listsort.txt
 * https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
