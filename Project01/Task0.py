@@ -25,10 +25,6 @@ Print messages:
 "First record of texts, <incoming number> texts <answering number> at time <time>"
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
-#print(sort1)
+
 print ("First record of texts, " + str(sort1[0][0]) + " texts " + str(sort1[0][1]) + " at time " + str(sort1[0][2]) )
-print ("First record of texts, " + str(sort1[-1][0]) + " texts " + str(sort1[-1][1]) + " at time " + str(sort1[-1][2]) )
-
-
-
-
+print ("Last record of calls, " + str(sort2[-1][0]) + " calls " + str(sort2[-1][1]) + " at time " + str(sort2[-1][2]) + ", Lasting " + str(sort2[-1][3]) + " Seconds")
