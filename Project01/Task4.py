@@ -9,13 +9,11 @@ It's ok if you don't understand how to read files.
 with open(r"C:\Users\agmak\Desktop\SVA\Desktop\AmitGoswami\DataStructureMasterReference\Project01\texts.csv", 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
-    #sort1 = sorted(texts, key=operator.itemgetter(2))
-
+    
 with open(r"C:\Users\agmak\Desktop\SVA\Desktop\AmitGoswami\DataStructureMasterReference\Project01\calls.csv", 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
-    call_sort = sorted(calls, key=operator.itemgetter(2))
-
+ 
 """
 TASK 4:
 The telephone company want to identify numbers that might be doing telephone marketing. Create a set of possible telemarketers:
@@ -25,21 +23,24 @@ Print a message:
 "These numbers could be telemarketers: "<list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
-outgoing_numbers = []
+
+callers_set = set()
+called_set = set()
+
 for eachline in calls:
-    outgoing_numbers.append(eachline[0])
+    callers_set.add(eachline[0])
+    called_set.add(eachline[1])
 
-text_sending_numbers = []
+texters_set = set()
+texted_set =set()
+
 for eachline in texts:
-    text_sending_numbers.append(eachline[0])
+    texters_set.add(eachline[0])
+    texted_set.add(eachline[1])
 
-outgoing_numbers = set(outgoing_numbers)
-text_sending_numbers = set(text_sending_numbers)
-
-telemarketer_numbers = outgoing_numbers.difference(text_sending_numbers)
-print(text_sending_numbers)
+telemarketer_numbers = callers_set.difference(called_set).difference(texters_set).difference(texted_set)
 
 print("These numbers could be telemarketers: ")
-for items in text_sending_numbers:
+for items in telemarketer_numbers:
     print(items)
 
