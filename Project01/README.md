@@ -1,7 +1,7 @@
 
 # Project01
 
-## Review Comments Implementation
+## Review Comments Implementation (For my reference)
 * 1. Your code should be well-structured and readable. -[Done]
       * Here are some formatting errors in the codes; check the clarification for each code.
       * Sorted has worsened the efficiency of the code. With simple indexing, the time is O(1), i.e., constant time, but with indexing is log-linear time, i.e., O(n logn).
@@ -29,13 +29,14 @@
       * Student provides a text file accurately explaining their run time analysis (Worst-Case Big-O Notation) for each solution they produced. 
 
 ## Complexity Analysis
-* TASK0: In this task we need to find the first record of texts and the last record of calls? We are making use of the Sorted() function which make use of the Timesort algorithm internally, which has the complexity in terms of O notation is O(nlogn). So the overall complexity of this particular task would be O(nlogn)
+* TASK0: In this task we need to find the first record of texts and the last record of calls? Overall complexity is O(1) i.e constant time.
 * TASK1: In this task we are iterating through texts and calls list and then making use of union to merge the two list. Union operation will have the complexity of O(len(s1) + len(s2)) ~ O(n) while iterating through the lists can also be done in O(n). So ovrall complexity would be for task-1 would be O(n).  
 * TASK2:To find the telephone number that spent the longest time on the phon during the period, we need to iterate through the list So overall time complexity of this particular task2 would be linear i.e O(n) 
 * TASK3:get_prefixes(phonenumber) function takes O(n) time. Fetching all the Phone Number prefixes and store in the "called_codes" list also takes O(n) time. Sort() internal python fuction takes o(n logn) time. SO overall o(n) + o(n) + o(n logn ) ~ o(n logn) time.
-* TASK4:Iterating thought calls list takes o(n) time. Difference function takes O(min(len(s), len(t)). So overall it would take o(n).
+* TASK4:Iterating thought calls list takes o(n) time. Difference function takes O(min(len(s), len(t)) and also used sort - O(n log n). So overall it would take o(n log n).
 
-## Step 1 - About the Project data
+## Project Details
+### Step 1 - About the Project data
 * The text data (text.csv) has the following columns: sending telephone number (string), receiving telephone number (string), timestamp of text message (string).
 * The call data (call.csv) has the following columns: calling telephone number (string), receiving telephone number (string), start timestamp of telephone call (string), duration of telephone call in seconds (string)
 *  There are three different kinds of telephone numbers, each with a different format:
@@ -43,7 +44,7 @@
    * Mobile numbers have no parentheses, but have a space in the middle of the number to help readability. The mobile code of a mobile number is its first four digits and they always start with 7, 8 or 9. Example: "93412 66159".
    * Telemarketers' numbers have no parentheses or space, but start with the code 140. Example: "1402316533".
 
-## Step 2 - Implement the Code
+### Step 2 - Implement the Code
 * Complete the five tasks (Task0.py, Task1.py, ...,Task4.py). Do not change the data or instructions, simply add your code below what has been provided. Include all the code that you need for each task in that file. 
 * In Tasks 3 and 4, you can use in-built methods sorted() or list.sort() for sorting which are the implementation of Timsort and Samplesort, respectively. Both these sorting methods have a worst-case time-complexity of O(n log n). Check the below links to learn more about these methods:
   * How to use the above methods - https://docs.python.org/3/howto/sorting.html
@@ -51,12 +52,11 @@
 
 The solution outputs for each file should be the print statements described in the instructions. Feel free to use other print statements during the development process, but remember to remove them for submission - the submitted files should print only the solution outputs.
 
-## Step 3 - Calculate Big O
+### Step 3 - Calculate Big O
 Once you have completed your solution for each problem, perform a run time analysis (Worst Case Big-O Notation) of your solution. Document this for each problem and include this in your submission.
 
-## Step 4 - Check again Rubric and Submit
+### Step 4 - Check again Rubric and Submit
 Use the rubric to check your work before submission. A Udacity Reviewer will give feedback on your work based on this rubric and will leave helpful comments on your code.
-
 
 ## Important Links
 * https://docs.python.org/3/howto/sorting.html
