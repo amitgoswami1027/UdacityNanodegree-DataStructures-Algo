@@ -41,6 +41,6 @@ for eachline in texts:
 telemarketer_numbers = callers_set.difference(called_set).difference(texters_set).difference(texted_set)
 
 print("These numbers could be telemarketers: ")
-for items in telemarketer_numbers:
+for items in sorted(telemarketer_numbers):
     print(items)
 

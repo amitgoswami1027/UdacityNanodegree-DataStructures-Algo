@@ -23,14 +23,13 @@ phone_dict= dict()
 
 for eachline in callslist:
     if eachline[0] in phone_dict:
-        phone_dict[eachline[0]] = phone_dict[eachline[0]] + int(eachline[3])
+        phone_dict[eachline[0]] = phone_dict.get(eachline[0],0) + int(eachline[3])
     else:
         phone_dict[eachline[0]] = int(eachline[3])
     if eachline[1] in phone_dict:
-        phone_dict[eachline[1]] = phone_dict[eachline[1]] + int(eachline[3])
+        phone_dict[eachline[1]] = phone_dict.get(eachline[1],0) + int(eachline[3])
     else:
         phone_dict[eachline[1]] = int(eachline[3])
-    
 
 phone_max_time = max(phone_dict, key=phone_dict.get) 
 
