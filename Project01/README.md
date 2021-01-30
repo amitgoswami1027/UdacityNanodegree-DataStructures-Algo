@@ -29,11 +29,11 @@
       * Student provides a text file accurately explaining their run time analysis (Worst-Case Big-O Notation) for each solution they produced. 
 
 ## Complexity Analysis
-* TASK0: In this task we need to find the first record of texts and the last record of calls? We are making use of the Sorted() function which make use of the Timesort algorithm internally, which has the complexity in terms of O notation is O(nlogn). So the overall complexity of this particular task would be O(nlogn)
+* TASK0: In this task we need to find the first record of texts and the last record of calls? Overall complexity is O(1) i.e constant time.
 * TASK1: In this task we are iterating through texts and calls list and then making use of union to merge the two list. Union operation will have the complexity of O(len(s1) + len(s2)) ~ O(n) while iterating through the lists can also be done in O(n). So ovrall complexity would be for task-1 would be O(n).  
 * TASK2:To find the telephone number that spent the longest time on the phon during the period, we need to iterate through the list So overall time complexity of this particular task2 would be linear i.e O(n) 
 * TASK3:get_prefixes(phonenumber) function takes O(n) time. Fetching all the Phone Number prefixes and store in the "called_codes" list also takes O(n) time. Sort() internal python fuction takes o(n logn) time. SO overall o(n) + o(n) + o(n logn ) ~ o(n logn) time.
-* TASK4:Iterating thought calls list takes o(n) time. Difference function takes O(min(len(s), len(t)). So overall it would take o(n).
+* TASK4:Iterating thought calls list takes o(n) time. Difference function takes O(min(len(s), len(t)) and also used sort - O(n log n). So overall it would take o(n log n).
 
 ## Project Details
 ### Step 1 - About the Project data
